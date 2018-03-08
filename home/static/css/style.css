@@ -1,0 +1,36 @@
+body {
+    background-color: maroon;
+    font-family: Arial;
+    padding-top: 50px;
+}
+
+h1 {
+    color: white;
+    font-family: 'Acme', sans-serif;
+    background-color: rgba(237, 224, 142, .5);
+    width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a, p {
+    color: gold;
+    font-family: 'Playfair Display SC', serif;
+}
+
+
+footer {
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid #ededed;
+    color: #A9A9A9;
+}
+
+.icon-bar {
+    background-color: #fff;
+}
+
+.accountform {
+    padding-top: 20px;
+}
