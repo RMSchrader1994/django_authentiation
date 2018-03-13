@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages, auth
 from .forms import UserLoginForm, UserRegistrationForm
 from django.core.exceptions import ValidationError
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def login(request):
     if request.method == "POST":
@@ -27,6 +28,7 @@ def logout(request):
     messages.success(request, "You have successfully logged out!")
     return redirect("home")
 
+@login_required()
 def profile(request):
     return render( request, "accounts/profile.html")
 
