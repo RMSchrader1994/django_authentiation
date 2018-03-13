@@ -12,6 +12,7 @@ def login(request):
                                      
             if user is not None:
                 auth.login(request, user)
+                messages.success(request, "You have successfully logged in!")
                 return redirect("home")
             else:
                 form.add_error(None, "Username or Password was entered incorrectly")
@@ -23,6 +24,7 @@ def login(request):
     
 def logout(request):
     auth.logout(request)
+    messages.success(request, "You have successfully logged out!")
     return redirect("home")
 
 def profile(request):
@@ -49,4 +51,3 @@ def register(request):
         form = UserRegistrationForm()
 
     return render(request, 'accounts/register.html', {'form': form})  
-    

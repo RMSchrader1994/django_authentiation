@@ -11,7 +11,7 @@
             <a href="{% url 'compose_message' %}" class="btn btn-danger btn-sm btn-block" role="button"><i class="glyphicon glyphicon-edit"></i> Compose</a>
             <hr>
             <ul class="nav nav-pills nav-stacked">
-                <li><a href="{% url 'inbox' %}">Inbox</a></li>
+                <li><a href="{% url 'inbox' %}"><span class="badge pull-right">{{ unread_mail }}</span>Inbox</a></li>
                 <li class="active"><a href="#"><span class="badge pull-right">{{ user.messages_sent.all|length }}</span> Sent Items </a>
                 </li>
             </ul>
